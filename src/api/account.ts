@@ -27,5 +27,5 @@ export const login = (data: Registr) => {
 
 // 用户列表
 export const queryUserList = (data: PageParm) => {
-  return httpPost('/api/user/userList', data);
+  return httpPost('/api/user/list', data);
 };

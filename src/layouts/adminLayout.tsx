@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card } from 'antd';
 import { Outlet } from 'react-router-dom';
 import Sidebar from './components/sidebar'
 import Header from './components/header';
@@ -9,7 +10,9 @@ const AdminLayout: React.FC = () => {
       <div className='admin-main'>
         <Header />
         <div className='admin-content'>
-          <Outlet />
+          <Card>
+            <Outlet />
+          </Card>
         </div>
       </div>
     </div>

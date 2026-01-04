@@ -13,7 +13,7 @@ const Sidebar: React.FC = () => {
   const location = useLocation();
   const generateMenuItems = (routes: AppRoute[], parentPath = ''): MenuItem[] => {
     return routes
-      .filter(r => r.path || !r.hideInMenu)
+      .filter(r => !r.hideInMenu)
       .map(route => {
         const fullPath = route.index
           ? parentPath

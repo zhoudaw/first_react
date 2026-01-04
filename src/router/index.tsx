@@ -6,6 +6,9 @@ import Login from '@/pages/login';
 import Register from '@/pages/register';
 import User from '@/pages/userMgmt/user';
 import Member from '@/pages/userMgmt/member';
+import Goods from '@/pages/goodsMgmt/goods';
+import GoodsDetails from '@/pages/goodsMgmt/goodsDetails';
+import GoodsConfig from '@/pages/goodsMgmt/goodsConfig';
 import {
   HomeOutlined,
   BorderInnerOutlined,
@@ -43,6 +46,17 @@ export const routeConfig: AppRoute[] = [
         children: [
           { index: true, element: <User />, label: '用户列表', icon: <UserOutlined /> },
           { path: 'member', element: <Member />, label: '会员列表', icon: <UserSwitchOutlined /> },
+        ],
+      },
+      {
+        path: 'goods',
+        element: <Outlet />,
+        icon: <UsergroupAddOutlined />,
+        label: '商品管理',
+        children: [
+          { index: true, element: <Goods />, label: '商品列表', icon: <UserOutlined /> },
+          { hideInMenu: true, path: 'goodsDetails', element: <GoodsDetails />, label: '商品详情' },
+          { path: 'gondsConfig', element: <GoodsConfig />, label: '商品配置', icon: <UserOutlined /> }
         ],
       },
       { path: 'order', element: <Order />, label: '订单管理', icon: <BorderInnerOutlined /> },
