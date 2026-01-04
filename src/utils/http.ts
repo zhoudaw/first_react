@@ -7,7 +7,7 @@ interface ApiResult<T = any> {
   data?: T;
 }
 const http = axios.create({
-  baseURL: 'http://192.168.2.13:8899',
+  baseURL: 'http://192.168.0.103:8899',
   timeout: 5000,
 });
 // 请求拦截器
